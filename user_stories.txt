@@ -1,0 +1,6 @@
+users should be able to view a quote
+users should be able to provide demographic information
+users should be able to share their emotions
+users should be able to view graphs and how compare how their input compares to others
+users should be able to see quote
+users should be able to see who was quoted
