@@ -1,0 +1,13 @@
+Day 1 Schedule
+DESIGN STUDIO
+Making mock up of the products of what they should look like
+
+Lunch Break
+
+Matt, Don, Zach - ERD’s - mockup - pseduo code
+-Developer Research (identifying what can and can't be done in a week)
+
+
+Annalise - user testing based on agreed UI and Design Studio results
+-User Stories (tests that demonstrate successful usage of the interface)
+-Usability testing
