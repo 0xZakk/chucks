@@ -9,7 +9,7 @@ https://docs.google.com/file/d/0Bx7tdR54GpBlWXFjekV3Z1dwM2c/edit
 ## Description
 Create an application that tracks how users feel about current political issues and topics.
 
-### Timeline
+## Timeline
 ### 1. Day 1 deliverables
 - User Research
 - User Flows
