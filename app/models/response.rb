@@ -4,7 +4,7 @@ class Response < ActiveRecord::Base
 
   # def calculate_total_responses
   # => goes to the database and gets the total number of responses for a given question_id
-  
+
   # def calculate_emotional_responses
   # => goes to the database and gets the total number of responses for a given question_id, broken out by emotion_id
 
