@@ -17,14 +17,14 @@
     <div id="only_on_show">
       <div id="user_selection">    
         <% if @response %>
-          <p><%= @response.id %></p>
+          <p><%= Emotion.find(@response.emoji_id).title %></p>
         <% else %>
           <!-- display nothing -->
         <% end %>
       </div>
 
       <div id="next_page">
-        <% if @response.id %>
+        <% if @response %>
           <p><%= link_to "New Card", "/responses/new" %></p>
         <% else %>
           <!-- display nothing -->
