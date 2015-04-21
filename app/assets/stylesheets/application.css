@@ -14,15 +14,24 @@
  *= require_self
  */
 
- body {
-  font-family: courier;
- }
+/************/
+/*  Global  */
+/************/
 
- header {
+body {
+  font-family: courier;
+}
+
+header {
   margin: 30px;
   height: 100px;
-  text-align: center;  
- }
+  text-align: center; 
+  border-bottom: 1px solid black; 
+}
+
+/****************/
+/*  Head Matter */
+/****************/
 
 .logo {
   font-size: 32pt;
@@ -33,14 +42,53 @@
   color: black;
 }
 
+#only_on_show {
+  height: 50px;
+}
+
+#user_selection {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+#next_page {
+  width: 100px;
+  height: 50px;
+  float: right;
+}
+
+/****************/
+/*  Body Matter */
+/****************/
+
 main {
   height: 50vh;
 }
+
+#frame1, #frame2, #frame3 {
+  height: 100vh;
+}
+
+.emoji_links {
+  text-align: center;
+}
+
+.emoji_links li{
+  display: inline-block;
+}
+
+.emoji_links input[type=submit] {
+  padding: 10px;
+  background: #ccc;
+  border: 0 none;
+}
+
+/******************/
+/*  Footer Matter */
+/******************/
 
 footer {
   text-align: center;
   margin: 30px;
 }
-
-
-

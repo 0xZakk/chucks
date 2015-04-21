@@ -7,18 +7,43 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-  <!-- < render partial :users_emotion -->
-  <span class="logo"><%= link_to "PostPOLL", responses_path %></span>
 
-  <!-- render partial :next_card -->
-</header>
-<main>
-  <%= yield %>
-</main>
-<footer>
-  <%= link_to "GitHub", "https://github.com/ZakkMan/chucks" %>
-</footer>
+  <header>
+    <!-- < render partial :users_emotion -->
+    <span class="logo">
+      <%= link_to "PostPOLL", responses_path %>
+    </span>
+
+    <div id="only_on_show">
+      <div id="user_selection">    
+        <% if @response %>
+          <p><%= @response.id %></p>
+        <% else %>
+          <!-- display nothing -->
+        <% end %>
+      </div>
+
+      <div id="next_page">
+        <% if @response.id %>
+          <p><%= link_to "New Card", "/responses/new" %></p>
+        <% else %>
+          <!-- display nothing -->
+        <% end %>
+      </div>
+    </div>
+
+    <!-- render partial :next_card -->
+  </header>
+
+  <main>
+
+    <%= yield %>
+
+  </main>
+
+<!-- <footer>
+  <%#= link_to "GitHub", "https://github.com/ZakkMan/chucks" %>
+</footer> -->
 
 </body>
 </html>
