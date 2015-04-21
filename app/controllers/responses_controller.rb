@@ -1,3 +1,4 @@
+require 'pry'
 class ResponsesController < ApplicationController
 
 
@@ -6,9 +7,14 @@ class ResponsesController < ApplicationController
 
   def show
     # Quote.find()
-    redirect_to('responses/show')
 
+    @response = Response.find(params[:id])
 
+    # redirect_to('responses/show')
+
+    @response_emotion = Emotion.find(@response.emoji_id)
+
+    # binding.pry
   end
 
   def new

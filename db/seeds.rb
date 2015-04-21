@@ -21,6 +21,7 @@ Emotion.create(title: "Disgust", url: "www.iconfinder.com/icons/210815/emoticon_
 Emotion.create(title: "Fear", url: "www.iconfinder.com/icons/210815/emoticon_face_happy_smile_smiley_icon#size=128")
 Emotion.create(title: "Surprise", url: "www.iconfinder.com/icons/210815/emoticon_face_happy_smile_smiley_icon#size=128")
 
+
 random_quote = Quote.first
 quote_responses = random_quote.responses.create([
   # {quote_id: "", emoji_id: "", zipcode: "", gender: "", poli_orientation:},

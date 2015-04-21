@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20150420215256) do
   create_table "emotions", force: :cascade do |t|
     t.string   "title"
     t.text     "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "response_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "quotes", force: :cascade do |t|
@@ -36,7 +37,7 @@ ActiveRecord::Schema.define(version: 20150420215256) do
 
   create_table "responses", force: :cascade do |t|
     t.integer  "quote_id"
-    t.string   "emoji_id"
+    t.integer  "emoji_id"
     t.string   "zipcode"
     t.string   "gender"
     t.string   "poli_orientation"
