@@ -6,3 +6,4 @@ users should be able to share their emotions
 users should be able to view graphs and how compare how their input compares to others
 users should be able to see quote
 users should be able to see who was quoted
+ 
