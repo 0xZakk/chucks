@@ -63,9 +63,9 @@
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 
     <!-- <#%= pie_chart @responses.group([:quote_id]).count %> -->
-<%= pie_chart @responses.group([:quote_id]).count %>
+<!-- <%= pie_chart @responses.group([:quote_id]).count %> -->
 
-<!-- <%#= pie_chart Response.group([:quote_id, :emoji_id]).count %> -->
+<%= pie_chart Response.group([:quote_id, :emoji_id]).count %>
 
 
     <!--# @quote = Quote.responses -->
