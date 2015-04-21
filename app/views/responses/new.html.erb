@@ -2,5 +2,17 @@
 
 (render emojis partial)
 
+<p> <%= @quote.body %> </p>
 
-<!-- <%#= render partial: "emojis" %> -->
+<!-- <%#= render partial: "emojis" %>
+ -->
+
+@quote.id 
+
+<ol class="emoji_links">
+  <% @emotions.each do |emotion| %>
+    <li>
+      <%= button_to emotion.title, "/responses", method: "post", action: "create" %>
+    </li>
+  <% end %>
+</ol>
