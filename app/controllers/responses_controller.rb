@@ -14,11 +14,12 @@ class ResponsesController < ApplicationController
 
     @response_emotion = Emotion.find(@response.emoji_id)
 
-    # binding.pry
+    @quote = Quote.find(@response.quote_id)
+    @responses = Response.all
+    #  binding.pry
   end
 
   def new
-
     @user_selection = Response.find(params[:id])
   end
 
