@@ -20,9 +20,7 @@ class ResponsesController < ApplicationController
       # binding.pry
   end
 
-  def new
-    @user_selection = Response.find(params[:id])
-  end
+
 
   def new
     @quote = Quote.all.sample

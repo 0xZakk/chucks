@@ -62,8 +62,13 @@
   <div class="graph">
     <!-- graph will be added -->
     <!-- <#%= pie_chart @response.group(emoji_id).count %> -->
+    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 
     <!-- <#%= pie_chart @responses.group([:quote_id]).count %> -->
+<%= pie_chart @responses.group([:quote_id]).count %>
+
+<!-- <%#= pie_chart Response.group([:quote_id, :emoji_id]).count %> -->
+
 
     <!--# @quote = Quote.responses -->
     <!-- <#%= @quote.group(:emoji_id).count -->
