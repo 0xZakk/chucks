@@ -13,7 +13,7 @@
       <%#= button_to emotion.title, "/responses", method: "post", action: "create" %>
       <%# @response.emotion = emotion %>
       <%= form_for @response do |f| %>
-        <%= f.hidden_field emotion.id  %>
+        <%= f.hidden_field :emoji_id, :value => emotion.id  %>
         <%= f.submit %>
       <% end %>
     </li>

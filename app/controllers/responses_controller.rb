@@ -14,7 +14,7 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    @emotional_response = Response.new(response_params)
+    @emotional_response = Response.new(params[:emoji_id])
 
     if @emotional_response.save
       redirect_to @emotional_response
@@ -25,6 +25,6 @@ class ResponsesController < ApplicationController
 
 private
   def response_params
-    params.require[:response].permit(:quote_id, :emoji_id)
+    params.require[:response].permit(:emoji_id)
   end
 end
