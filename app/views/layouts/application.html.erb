@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chucks</title>
+  <title>PostPoll</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-# Header
-#   title
-#   partial with conditional to display user selection
+<header>
+  <!-- < render partial :users_emotion -->
+  <span class="logo"><%= link_to "PostPOLL", responses_path %></span>
 
-<%= yield %>
-
-# Footer with link to github repo, icon as link?
+  <!-- render partial :next_card -->
+</header>
+<main>
+  <%= yield %>
+</main>
+<footer>
+  <%= link_to "GitHub", "https://github.com/ZakkMan/chucks" %>
+</footer>
 
 </body>
 </html>

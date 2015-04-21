@@ -1,7 +1,6 @@
 class ResponsesController < ApplicationController
-
-
   def index
+
   end
 
   def show
@@ -9,7 +8,8 @@ class ResponsesController < ApplicationController
   end
 
   def new
-
+    @quotes = Quote.all
+    @response = Response.new
   end
 
 
@@ -18,8 +18,7 @@ class ResponsesController < ApplicationController
   end
 
 private
-
-  def response_params
-    params.require(:response).permit(:)
-  end
+  # def response_params
+  #   params.require(:response).permit(:)
+  # end
 end
