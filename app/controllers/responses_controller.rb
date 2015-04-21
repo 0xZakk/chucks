@@ -1,14 +1,18 @@
 class ResponsesController < ApplicationController
-  def index
 
+
+  def index
   end
 
   def show
+    # Quote.find()
+    redirect_to('responses/show')
+
 
   end
 
   def new
-    
+
   end
 
 
@@ -16,8 +20,9 @@ class ResponsesController < ApplicationController
 
   end
 
-private
-  # def response_params
-  #   params.require(:response).permit(:)
-  # end
+# private
+#
+#   def response_params
+#     params.require(:response).permit(:)
+#   end
 end

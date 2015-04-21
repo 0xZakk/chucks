@@ -20,3 +20,14 @@ Emotion.create(title: "Anger", url: "www.iconfinder.com/icons/210815/emoticon_fa
 Emotion.create(title: "Disgust", url: "www.iconfinder.com/icons/210815/emoticon_face_happy_smile_smiley_icon#size=128")
 Emotion.create(title: "Fear", url: "www.iconfinder.com/icons/210815/emoticon_face_happy_smile_smiley_icon#size=128")
 Emotion.create(title: "Surprise", url: "www.iconfinder.com/icons/210815/emoticon_face_happy_smile_smiley_icon#size=128")
+
+random_quote = Quote.first
+quote_responses = random_quote.responses.create([
+  # {quote_id: "", emoji_id: "", zipcode: "", gender: "", poli_orientation:},
+
+  {emoji_id: 1, zipcode: "123141", gender: "male", poli_orientation: "tea party"},
+  {emoji_id: 3, zipcode: "123411", gender: "female", poli_orientation: "green party"},
+  {emoji_id: 4, zipcode: "901821", gender: "male", poli_orientation: "democrat"},
+  {emoji_id: 5, zipcode: "12341", gender: "female", poli_orientation: "republican"},
+  {emoji_id: 6, zipcode: "123412", gender: "male", poli_orientation: "constitution party"}
+  ])
