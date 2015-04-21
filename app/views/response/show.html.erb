@@ -24,9 +24,11 @@
     </div>
 
     <div class="author_data">
-      <p><%= @quote.author %></p>
-      <p><%= @quote.date %></p>
-      <p><%= @quote.where %></p>
+      <ul>
+        <li><%= @quote.author %></li>
+        <li><%= @quote.date %></li>
+        <li><%= @quote.where %></li>
+      </ul>
       <!-- the where attribute needs to be added, it is not mentioned in readme -->
     </div>
 
@@ -38,7 +40,7 @@
 
   </div>
 
-  <div class="arrow bounce">
+  <div class="arrow_bounce">
     <!-- reference: http://codepen.io/dodozhang21/pen/siKtp -->
   </div>
 
@@ -54,10 +56,8 @@
   <div class="graph">
     <!-- graph will be added -->
     <%= pie_chart Response.group(:emotion_id).count %>
-
-
-
   </div>
+
   <div class="breakdown">
     <!-- visuals of percentage break down, color coded -->
   </div>
@@ -74,9 +74,7 @@
 <div class="frame_3">
 
   <div class="background">
-
     <!-- <p>wiki blurb api</p> -->
-
   </div>
 
 
