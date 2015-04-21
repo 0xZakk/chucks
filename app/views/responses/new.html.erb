@@ -1,5 +1,18 @@
-#render postcard partial
-#render emojis partial
+(postcard with random quote will go here)<br>
 
+(render emojis partial)
 
-<!-- <%=# render partial: "emojis" %> -->
+<p> <%= @quote.body %> </p>
+
+<!-- <%#= render partial: "emojis" %>
+ -->
+
+@quote.id 
+
+<ol class="emoji_links">
+  <% @emotions.each do |emotion| %>
+    <li>
+      <%= button_to emotion.title, "/responses", method: "post", action: "create" %>
+    </li>
+  <% end %>
+</ol>
