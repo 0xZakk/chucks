@@ -1,3 +1,5 @@
+data base should have seed data - Matt
+
 users should be able to view a quote
 users should be able to provide demographic information
 users should be able to share their emotions
