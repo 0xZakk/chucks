@@ -7,6 +7,13 @@ class ResponsesController < ApplicationController
 
   def show
     @response = Response.find(params[:id])
+    # redirect_to('responses/show')
+
+    @response_emotion = Emotion.find(@response.emoji_id)
+
+    @quote = Quote.find(@response.quote_id)
+    @responses = Response.all
+    #  binding.pry
   end
 
   def new
