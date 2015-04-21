@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20150420215256) do
 
   create_table "responses", force: :cascade do |t|
     t.integer  "quote_id"
-    t.string   "emoji_id"
+    t.integer  "emoji_id"
     t.string   "zipcode"
     t.string   "gender"
     t.string   "poli_orientation"

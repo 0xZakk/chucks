@@ -1,3 +1,3 @@
 class Emotion < ActiveRecord::Base
-  belongs_to :response
+  has_many :responses
 end

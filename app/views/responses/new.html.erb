@@ -7,12 +7,15 @@
 <!-- <%#= render partial: "emojis" %>
  -->
 
-@quote.id 
-
 <ol class="emoji_links">
   <% @emotions.each do |emotion| %>
     <li>
-      <%= button_to emotion.title, "/responses", method: "post", action: "create" %>
+      <%#= button_to emotion.title, "/responses", method: "post", action: "create" %>
+      <%# @response.emotion = emotion %>
+      <%= form_for @response do |f| %>
+        <%= f.hidden_field emotion.id  %>
+        <%= f.submit %>
+      <% end %>
     </li>
   <% end %>
 </ol>
