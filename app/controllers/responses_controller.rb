@@ -1,4 +1,5 @@
 require 'pry'
+require 'chartkick'
 class ResponsesController < ApplicationController
 
 
@@ -13,7 +14,7 @@ class ResponsesController < ApplicationController
 
     @quote = Quote.find(@response.quote_id)
     @responses = Response.all
-    #  binding.pry
+      # binding.pry
   end
 
   def new

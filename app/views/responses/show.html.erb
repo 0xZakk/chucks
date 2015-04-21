@@ -55,11 +55,22 @@
 
 
 
-<!-- <div class="frame_2">
+<div class="frame_2">
 
   <div class="graph">
-    graph will be added
-    <%#= pie_chart @response.group(emotion_id).count %>
+    <!-- graph will be added -->
+    <!-- <#%= pie_chart @response.group(emoji_id).count %> -->
+    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
+    <!-- <#%= pie_chart @responses.group([:quote_id]).count %> -->
+<%= pie_chart @responses.group([:quote_id]).count %>
+
+<!-- <%#= pie_chart Response.group([:quote_id, :emoji_id]).count %> -->
+
+
+    <!--# @quote = Quote.responses -->
+    <!-- <#%= @quote.group(:emoji_id).count -->
+    <p>testing test</p>
   </div>
 
   <div class="breakdown">
@@ -68,22 +79,31 @@
 
 
 </div>
-shows the graph and visual data -->
+# shows the graph and visual data
 
 
 
 
-<div class="frame_3">
+<!-- <div class="frame_3">
 
   <div class="background">
-    <!-- <p>wiki blurb api</p> -->
+    <p>wiki blurb api</p>
   </div>
 
 
   <div class="continue_reading">
+<<<<<<< HEAD
     <%#= link_to("Continue Reading"), @quote.wiki_url %>
     <!-- wiki url needs to be added -->
 
   </div>
 </div>
 <!-- provides background info about the topic and sources to new info -->
+=======
+    <#%= link_to("Continue Reading"), @quote.wiki_url %>
+    wiki url needs to be added
+
+  </div>
+</div> -->
+<!-- provides background info about the topic and sources to new info -->
+>>>>>>> dmc-master

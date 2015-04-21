@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'chartkick'
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
