@@ -1,5 +1,3 @@
-require 'pry'
-require 'chartkick'
 class ResponsesController < ApplicationController
 
 
