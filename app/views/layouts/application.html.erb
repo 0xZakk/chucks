@@ -9,13 +9,13 @@
 <body>
 <header>
   <!-- < render partial :users_emotion -->
-  <span class="logo">PostPOLL</span>
+  <span class="logo"><%= link_to "PostPOLL", responses_path %></span>
 
   <!-- render partial :next_card -->
 </header>
-
-<%= yield %>
-
+<main>
+  <%= yield %>
+</main>
 <footer>
   <%= link_to "GitHub", "https://github.com/ZakkMan/chucks" %>
 </footer>
