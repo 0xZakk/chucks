@@ -20,7 +20,7 @@ class ResponsesController < ApplicationController
     @quote = Quote.all.sample
     @response = Response.new
     @emotions = Emotion.all
-    binding.pry
+    # binding.pry
   end
 
   def create
