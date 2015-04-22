@@ -1,7 +1,3 @@
-(postcard with random quote will go here)<br>
-
-(render emojis partial)
-
 <p> <%= @quote.body %> </p>
 
 <!-- <%#= render partial: "emojis" %>
@@ -10,8 +6,6 @@
 <ol class="emoji_links">
   <% @emotions.each do |emotion| %>
     <li id="<%= emotion.title.downcase %>">
-      <%#= button_to emotion.title, "/responses", method: "post", action: "create" %>
-      <%# @response.emotion = emotion %>
       <%= form_for @response do |f| %>
         <%= f.hidden_field :emotion_id, :value => emotion.id  %>
         <%= f.hidden_field :quote_id, :value => @quote.id  %>
