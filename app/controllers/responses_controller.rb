@@ -2,6 +2,7 @@ class ResponsesController < ApplicationController
 
 
   def index
+    @response = Response.new
   end
 
   def show
