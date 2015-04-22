@@ -66,10 +66,15 @@ main {
   height: 50vh;
 }
 
-#frame1, #frame2, #frame3 {
-  height: 100vh;
+/** INDEX **/
+#play_button {
+  border: 1px solid black;
+  padding: 5px 30px;
+  text-decoration: none;
+  color: black;
 }
 
+/** NEW **/
 .emoji_links {
   text-align: center;
 }
@@ -109,6 +114,13 @@ main {
 
 #surprise input[type=submit] {
   background-image: url("https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_15-64.png");
+}
+
+
+/** SHOW **/
+
+.frame {
+  height: 100vh;
 }
 
 /******************/
