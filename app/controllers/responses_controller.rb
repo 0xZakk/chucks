@@ -9,7 +9,7 @@ class ResponsesController < ApplicationController
     @response = Response.find(params[:id])
     # redirect_to('responses/show')
 
-    @response_emotion = Emotion.find(@response.emoji_id)
+    @response_emotion = Emotion.find(@response.emotion_id)
 
     @quote = Quote.find(@response.quote_id)
     @responses = Response.all
@@ -20,6 +20,7 @@ class ResponsesController < ApplicationController
     @quote = Quote.all.sample
     @response = Response.new
     @emotions = Emotion.all
+    binding.pry
   end
 
   def create
@@ -34,6 +35,6 @@ class ResponsesController < ApplicationController
 
 private
   def response_params
-    params.require(:response).permit(:emoji_id, :quote_id)
+    params.require(:response).permit(:emotion_id, :quote_id)
   end
 end

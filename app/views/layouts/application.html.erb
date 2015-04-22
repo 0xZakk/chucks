@@ -17,7 +17,7 @@
     <div id="only_on_show">
       <div id="user_selection">    
         <% if @response.id %>
-          <p><%= Emotion.find(@response.emoji_id).title %></p>
+          <p><%= Emotion.find(@response.emotion_id).title %></p>
         <% else %>
           <!-- display nothing -->
         <% end %>

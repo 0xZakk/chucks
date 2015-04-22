@@ -2,7 +2,7 @@ class CreateResponses < ActiveRecord::Migration
   def change
     create_table :responses do |t|
       t.belongs_to :quote
-      t.integer :emotion
+      t.belongs_to :emotion
       t.string :zipcode
       t.string :gender
       t.string :poli_orientation
