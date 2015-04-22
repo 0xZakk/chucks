@@ -15,7 +15,7 @@
       <%= form_for @response do |f| %>
         <%= f.hidden_field :emotion_id, :value => emotion.id  %>
         <%= f.hidden_field :quote_id, :value => @quote.id  %>
-        <%= f.submit "#{emotion.title}" %>
+        <%= f.submit image_tag("#{emotion.url}") %>
       <% end %>
     </li>
   <% end %>
