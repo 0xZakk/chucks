@@ -79,9 +79,36 @@ main {
 }
 
 .emoji_links input[type=submit] {
+  width: 64px;
+  height: 64px;
   padding: 10px;
-  background: #ccc;
   border: 0 none;
+  background-color: white;
+}
+
+/**   Emotions   **/
+#happiness input[type=submit] {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_3-64.png");
+}
+
+#sadness input[type=submit] {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_22-64.png");
+}
+
+#anger input[type=submit] {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_31-64.png");
+}
+
+#disgust input[type=submit] {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_32-64.png");
+}
+
+#fear input[type=submit] {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_16-64.png");
+}
+
+#surprise input[type=submit] {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_15-64.png");
 }
 
 /******************/

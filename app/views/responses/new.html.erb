@@ -9,13 +9,13 @@
 
 <ol class="emoji_links">
   <% @emotions.each do |emotion| %>
-    <li>
+    <li id="<%= emotion.title.downcase %>">
       <%#= button_to emotion.title, "/responses", method: "post", action: "create" %>
       <%# @response.emotion = emotion %>
       <%= form_for @response do |f| %>
         <%= f.hidden_field :emotion_id, :value => emotion.id  %>
         <%= f.hidden_field :quote_id, :value => @quote.id  %>
-        <%= f.submit image_tag("#{emotion.url}") %>
+        <%= f.submit "", :id => emotion.title.downcase %>
       <% end %>
     </li>
   <% end %>

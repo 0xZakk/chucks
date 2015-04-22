@@ -14,12 +14,12 @@ Quote.create(category: "politics", topic: "Foreign Policy", body: "Iran Iran Ira
 Quote.create(category: "politics", topic: "Gay Rights", body: "gays are the best", author: "Barack Obama", location: "Washington D.C.", date: "09/09/2013")
 
 
-Emotion.create(title: "Happness", url: "https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_3-128.png")
+Emotion.create(title: "Happiness", url: "https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_3-128.png")
 Emotion.create(title: "Sadness", url: "https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_20-128.png")
 Emotion.create(title: "Anger", url: "https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_16-128.png")
 Emotion.create(title: "Disgust", url: "https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_21-128.png")
 Emotion.create(title: "Fear", url: "https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_16-128.png")
-Emotion.create(title: "Surprise", url: "https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_15-128.png")
+Emotion.create(title: "Surprise", url: "/assets/images/surprised.png")
 
 
 random_quote = Quote.first
