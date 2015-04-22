@@ -31,6 +31,7 @@ class ResponsesController < ApplicationController
     else
       render :new
     end
+    binding.pry
   end
 
 private

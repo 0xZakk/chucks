@@ -1,6 +1,6 @@
 class Response < ActiveRecord::Base
   belongs_to :quote
-  has_one :emotion
+  belongs_to :emotion
 
   # def calculate_total_responses
   # => goes to the database and gets the total number of responses for a given question_id
