@@ -22,13 +22,11 @@ Emotion.create(title: "Fear", url: "www.iconfinder.com/icons/210815/emoticon_fac
 Emotion.create(title: "Surprise", url: "www.iconfinder.com/icons/210815/emoticon_face_happy_smile_smiley_icon#size=128")
 
 
-# random_quote = Quote.first
-# quote_responses = random_quote.responses.create([
-#   # {quote_id: "", emotion_id: "", zipcode: "", gender: "", poli_orientation:},
-
-#   {emotion_id: 1, zipcode: "123141", gender: "male", poli_orientation: "tea party"},
-#   {emotion_id: 3, zipcode: "123411", gender: "female", poli_orientation: "green party"},
-#   {emotion_id: 4, zipcode: "901821", gender: "male", poli_orientation: "democrat"},
-#   {emotion_id: 5, zipcode: "12341", gender: "female", poli_orientation: "republican"},
-#   {emotion_id: 6, zipcode: "123412", gender: "male", poli_orientation: "constitution party"}
-#   ])
+random_quote = Quote.first
+quote_responses = random_quote.responses.create([
+  {emotion_id: 1, zipcode: "123141", gender: "male", poli_orientation: "tea party"},
+  {emotion_id: 1, zipcode: "123411", gender: "female", poli_orientation: "green party"},
+  {emotion_id: 2, zipcode: "901821", gender: "male", poli_orientation: "democrat"},
+  {emotion_id: 2, zipcode: "12341", gender: "female", poli_orientation: "republican"},
+  {emotion_id: 2, zipcode: "123412", gender: "male", poli_orientation: "constitution party"}
+  ])
