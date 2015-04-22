@@ -20,6 +20,7 @@ class ResponsesController < ApplicationController
     @quote = Quote.all.sample
     @response = Response.new
     @emotions = Emotion.all
+
   end
 
   def create
