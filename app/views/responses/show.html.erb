@@ -61,9 +61,8 @@
     <!-- graph will be added -->
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
     <% all_quote_responses= @responses.where("quote_id = #{@quote.id}")%>
-    <%= pie_chart all_quote_responses.group(:emotion_id).count %>
-
-
+    <% groups = all_quote_responses.group(:emotion_id).count %>
+    <%=pie_chart( { "\u{1F600}" => groups[1], "\u{1F61F}" => groups[2], "\u{1F61E}" => groups[3], "\u{1F616}"=> groups[4], "\u{1F628}"=> groups[4], "\u{1F635}"=> groups[5]}) %>
     <p>testing test</p>
   </div>
 
