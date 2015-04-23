@@ -2,25 +2,22 @@ class ResponsesController < ApplicationController
 
 
   def index
+    @quote = Quote.all
     @response = Response.new
   end
 
   def show
     @response = Response.find(params[:id])
-    # redirect_to('responses/show')
-
-    @response_emotion = Emotion.find(@response.emotion_id)
-
-    @quote = Quote.find(@response.quote_id)
+    @response_quote = @response.quote
     @responses = Response.all
-      # binding.pry
+    @response_emotion = @response.emotion
   end
 
   def new
-    @quote = Quote.all.sample
     @response = Response.new
+    
+    @response_quote = Quote.retrieve_quote(params[:topic_filter])
     @emotions = Emotion.all
-
   end
 
   def create
@@ -31,11 +28,11 @@ class ResponsesController < ApplicationController
     else
       render :new
     end
-    # binding.pry
   end
 
 private
   def response_params
     params.require(:response).permit(:emotion_id, :quote_id)
   end
+
 end

@@ -1,4 +1,4 @@
-<!-- <%#= render partial: "postcard" %> -->
-<%= link_to "Play", "/responses/new", id: "play_button" %>
-
-
+<%= form_tag new_response_path, method: 'get' do %>
+  <%= select_tag 'topic_filter', options_for_select(Quote.quote_topics.uniq)%>
+   <%= submit_tag "Send", id: "play_button"%>
+<% end%>

@@ -1,14 +1,11 @@
-<p> <%= @quote.body %> </p>
-
-<!-- <%#= render partial: "emojis" %>
- -->
+<p><%= @response_quote.body %></p>
 
 <ol class="emoji_links">
   <% @emotions.each do |emotion| %>
     <li id="<%= emotion.title.downcase %>">
       <%= form_for @response do |f| %>
         <%= f.hidden_field :emotion_id, :value => emotion.id  %>
-        <%= f.hidden_field :quote_id, :value => @quote.id  %>
+        <%= f.hidden_field :quote_id, :value => @response_quote.id  %>
         <%= f.submit "", :id => emotion.title.downcase %>
       <% end %>
     </li>

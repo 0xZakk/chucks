@@ -1,17 +1,19 @@
+
+
 <div class="frame">
   <h1>Quote</h1>
 
   <div class="postcard">
 
     <div class="quote">
-      <p>"<%= @quote.body %>"</p>
+      <p>"<%= @response_quote.body %>"</p>
     </div>
 
     <div class="author_data">
       <ul>
-        <li><%= @quote.author %></li>
-        <li><%= @quote.date %></li>
-        <li><%= @quote.location %></li>
+        <li><%= @response_quote.author %></li>
+        <li><%= @response_quote.date %></li>
+        <li><%= @response_quote.location %></li>
       </ul>
       <!-- the where attribute needs to be added, it is not mentioned in readme -->
     </div>
@@ -41,7 +43,7 @@
   <div class="graph">
     <!-- graph will be added -->
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-    <% all_quote_responses= @responses.where("quote_id = #{@quote.id}")%>
+    <% all_quote_responses= @responses.where("quote_id = #{@response_quote.id}")%>
     <% groups = all_quote_responses.group(:emotion_id).count %>
     <%=pie_chart( { "\u{1F600}" => groups[1], "\u{1F61F}" => groups[2], "\u{1F621}" => groups[3], "\u{1F616}"=> groups[4], "\u{1F631}"=> groups[5], "\u{1F633}"=> groups[6]} ) %>
     <p>testing test</p>

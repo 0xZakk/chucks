@@ -9,7 +9,6 @@
 <body>
 
   <header>
-    <!-- < render partial :users_emotion -->
     <span class="logo">
       <%= link_to "PostPOLL", responses_path %>
     </span>
@@ -25,14 +24,19 @@
 
       <div id="next_page">
         <% if @response.id %>
-          <p><%= link_to "New Card", "/responses/new" %></p>
+          <p>
+            <%= form_tag new_response_path, method: 'get' do %>
+            <%= hidden_field_tag 'topic_filter', @response_quote.topic %>
+            <%= submit_tag "New Card", id: "play_button" %>
+            <% end %>
+          </p>
+          <!-- display nothin -->
         <% else %>
           <!-- display nothing -->
         <% end %>
       </div>
     </div>
 
-    <!-- render partial :next_card -->
   </header>
 
   <main>
