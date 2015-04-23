@@ -1,8 +1,15 @@
 (postcard with random quote will go here)<br>
 
 (render emojis partial)
+<br>
+<br>
+<br>
 
-<p> <%= @quote.body %> </p>
+<% if params[:topic_filter] == "Filter by Topic"%>
+   <p> <%= @quote.body %> </p>
+<%else %>
+    <p> <%= @filter_quote.body%></p>
+<%end%>    <!--ends if statement-->
 
 <!-- <%#= render partial: "emojis" %>
  -->

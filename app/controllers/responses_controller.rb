@@ -11,7 +11,6 @@ class ResponsesController < ApplicationController
     # redirect_to('responses/show')
 
     @response_emotion = Emotion.find(@response.emotion_id)
-
     @quote = Quote.find(@response.quote_id)
     @responses = Response.all
       # binding.pry
@@ -19,9 +18,10 @@ class ResponsesController < ApplicationController
 
   def new
     @quote = Quote.all.sample
+    @filter_quote = Quote.find_by topic: params[:topic_filter]
     @response = Response.new
     @emotions = Emotion.all
-    # binding.pry
+    #  binding.pry
   end
 
   def create

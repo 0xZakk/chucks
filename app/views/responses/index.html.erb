@@ -3,9 +3,11 @@
 
 #add postcard partial
 #add submit/playbutton
-<%= link_to "Play", "/responses/new" %>
 
-<%= select(:topic, :id, Quote.quote_topics)%>
-
+<%= form_tag new_response_path, method: 'get' do %>
+  <%= select_tag 'topic_filter', options_for_select(Quote.quote_topics.uniq)%>
+   <!-- #added .uniq so topics dont repeat -->
+   <%= submit_tag "Send"%>
+<% end%>
 
 <!-- <%#= render partial: "postcard" %> -->
