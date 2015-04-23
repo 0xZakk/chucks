@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20150420215256) do
   create_table "responses", force: :cascade do |t|
     t.integer  "quote_id"
     t.integer  "emotion_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

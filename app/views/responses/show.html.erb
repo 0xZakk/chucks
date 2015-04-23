@@ -26,9 +26,6 @@
 
   </div>
 
-  <div class="arrow_bounce">
-    <!-- reference: http://codepen.io/dodozhang21/pen/siKtp -->
-  </div>
 
 
 </div>
@@ -59,6 +56,20 @@
 
 
 
+
+<div id="frame2">
+  <div class="graph">
+    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <%= pie_chart @responses.group([:quote_id]).count %>
+  </div>
+
+  <div class="breakdown">
+    <%= link_to"More Information About this Topic", @redirect_wiki_link %>
+    <h3><%= @current_topic %> </h3>
+    <%= simple_format @blurb %>
+    <p> <%= link_to "Source: Wikipedia", @redirect_wiki_link %> </p>
+  </div>
+</div>
 
 <!--
   <div class="frame">
