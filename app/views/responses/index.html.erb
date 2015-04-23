@@ -5,5 +5,7 @@
 #add submit/playbutton
 <%= link_to "Play", "/responses/new" %>
 
+<%= select(:topic, :id, Quote.quote_topics)%>
+
 
 <!-- <%#= render partial: "postcard" %> -->

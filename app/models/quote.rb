@@ -8,4 +8,7 @@ class Quote < ActiveRecord::Base
 
   # def get_quote
   # => return as hash
+  def self.quote_topics
+    Quote.all.map{|x| [x.topic, x.id] }
+  end
 end

@@ -2,6 +2,7 @@ class ResponsesController < ApplicationController
 
 
   def index
+    @quote = Quote.all
     @response = Response.new
   end
 
