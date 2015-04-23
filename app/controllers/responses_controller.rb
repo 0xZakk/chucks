@@ -21,10 +21,10 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    @emotional_response = Response.new(response_params)
+    @response = Response.new(response_params)
 
-    if @emotional_response.save
-      redirect_to @emotional_response
+    if @response.save
+      redirect_to @response
     else
       render :new
     end
