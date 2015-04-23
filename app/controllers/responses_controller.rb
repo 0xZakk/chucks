@@ -19,11 +19,11 @@ class ResponsesController < ApplicationController
 
     if redirection_value.scan("#REDIRECT") == ["#REDIRECT"]
       redirect_topic = redirection_value.scan(/(?<=\[)[^\[.]+?(?=\])/).first
-      @redirect_wiki_link = "https://en.wikipedia.org/wiki/#{redirect_topic}"
-      blurb_extract = HTTParty.get("https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=#{redirect_topic}")
+      @redirect_wiki_link = "http://en.wikipedia.org/wiki/#{redirect_topic}"
+      blurb_extract = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=#{redirect_topic}")
     else
-      @redirect_wiki_link = "https://en.wikipedia.org/wiki/#{@current_topic}"
-      blurb_extract = HTTParty.get("https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=#{@current_topic}")
+      @redirect_wiki_link = "http://en.wikipedia.org/wiki/#{@current_topic}"
+      blurb_extract = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=#{@current_topic}")
     end
 
     blurb_key = blurb_extract["query"]["pages"].keys[0]
