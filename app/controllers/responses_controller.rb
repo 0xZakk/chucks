@@ -11,7 +11,8 @@ class ResponsesController < ApplicationController
     @response_quote = @response.quote
     @responses = Response.all
     @response_emotion = @response.emotion
-    @current_topic = @quote.topic
+    @current_topic = @response_quote.topic
+
 
 
     @wiki_link = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=#{@current_topic}&prop=revisions&rvprop=content")

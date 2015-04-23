@@ -24,9 +24,9 @@ Emotion.create(title: "Surprise", url: "/assets/images/surprised.png")
 
 random_quote = Quote.first
 quote_responses = random_quote.responses.create([
-  {emotion_id: 1, zipcode: "123141", gender: "male", poli_orientation: "tea party"},
-  {emotion_id: 1, zipcode: "123411", gender: "female", poli_orientation: "green party"},
-  {emotion_id: 2, zipcode: "901821", gender: "male", poli_orientation: "democrat"},
-  {emotion_id: 2, zipcode: "12341", gender: "female", poli_orientation: "republican"},
-  {emotion_id: 2, zipcode: "123412", gender: "male", poli_orientation: "constitution party"}
+  {emotion_id: 1, quote_id: 1 },
+  {emotion_id: 1, quote_id: 2 },
+  {emotion_id: 2, quote_id: 3 },
+  {emotion_id: 2, quote_id: 4 },
+  {emotion_id: 2, quote_id: 5 }
   ])

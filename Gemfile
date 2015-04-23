@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'httparty'
 gem 'rails_admin'
 gem 'chartkick'
 gem 'pry'
