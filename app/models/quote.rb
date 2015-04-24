@@ -7,11 +7,11 @@ class Quote < ActiveRecord::Base
     return all_category.unshift("Filter by Category")
   end
 
-  def self.retrieve_quote(t)
-    if t == "Filter by Topic"
+  def self.retrieve_quote(c)
+    if c == "Filter by Category"
       return Quote.all.sample
     else
-      return Quote.find_by topic: t
+      return Quote.where category: c
     end
   end
 

@@ -12,14 +12,15 @@ class ResponsesController < ApplicationController
     @response_quote = @response.quote
     @responses = Response.all
     @response_emotion = @response.emotion
-    binding.pry
+    # binding.pry
   end
 
   def new
     @response = Response.new
-
-    @response_quote = Quote.retrieve_quote(params[:topic_filter])
+    find_quote = Quote.retrieve_quote(params[:category_filter])
+    @response_quote = find_quote.sample
     @emotions = Emotion.all
+    # binding.pry
   end
 
   def create
