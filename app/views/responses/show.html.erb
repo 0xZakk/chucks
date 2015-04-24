@@ -1,25 +1,32 @@
 <!-- FIRST FRAME -->
-<div class="frame">
-  <h1>Quote</h1>
+<div class="frame" id="frame-one">
   <div class="postcard">
-    <div class="quote">
-      <p>"<%= @response_quote.body %>"</p>
+
+    <div class="left-side">
+      <div class="quote">
+        <p>"<%= @response_quote.body %>"</p>
+      </div>
     </div>
-    <div class="author_data">
-      <ul>
-        <li><%= @response_quote.author %></li>
-        <li><%= @response_quote.date %></li>
-        <li><%= @response_quote.location %></li>
-      </ul>
+
+    <div class="right-side">
+      <div class="author_data">
+        <ul>
+          <li><%= @response_quote.author %></li>
+          <li><%= @response_quote.date %></li>
+          <li><%= @response_quote.location %></li>
+        </ul>
+      </div>
     </div>
+
   </div>
+
   <div class="response_count">
-    <p><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> number of people responded to this quote.</p>
+    <h3><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> number of people responded to this quote.</h3>
   </div>
 </div>
 
 <!-- SECOND FRAME -->
-<div class="frame">
+<div class="frame" id="second_frame">
   <div class="graph">
     <!-- graph will be added -->
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
@@ -30,7 +37,7 @@
 </div>
 
 <!-- THIRD FRAME -->
-<div class="frame">
+<div class="frame" id="third_frame">
   <div class="breakdown">
     <h3><%= @current_topic %> </h3>
     <%= simple_format @blurb %>

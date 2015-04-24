@@ -21,7 +21,8 @@
 body {
   font-family: "Courier New", Courier, monospace;
   background-color: #FAECD8;
-}
+/*  text-align: center;
+*/}
 
 header {
   margin: 30px;
@@ -74,6 +75,20 @@ main {
   text-decoration: none;
   color: black;
   background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#category_dropdown {
+
+}
+
+#category_filter {
+  width: 400px;
+  border: 1px solid black;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 /** NEW **/
@@ -118,11 +133,44 @@ main {
   background-image: url("https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_15-64.png");
 }
 
+/**   POSTCARD  **/
+.postcard {
+  width: 600px;
+  height: 350px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.left-side {
+  float: left;
+  border: 1px solid black;
+  width: 49.5%;
+  height: 100%;
+}
+
+.right-side {
+  float: right;
+  border: 1px solid black;  
+  width: 49.5%;
+  height: 100%;
+}
 
 /** SHOW **/
 
 .frame {
   height: 100vh;
+}
+
+#frame-one {
+  text-align: center;
+}
+
+.author_data li {
+  list-style-type: none;
+}
+
+.response_count {
+
 }
 
 /******************/
