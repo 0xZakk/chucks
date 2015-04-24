@@ -1,88 +1,39 @@
-
-
+<!-- FIRST FRAME -->
 <div class="frame">
   <h1>Quote</h1>
-
   <div class="postcard">
-
     <div class="quote">
       <p>"<%= @response_quote.body %>"</p>
     </div>
-
     <div class="author_data">
       <ul>
         <li><%= @response_quote.author %></li>
         <li><%= @response_quote.date %></li>
         <li><%= @response_quote.location %></li>
       </ul>
-      <!-- the where attribute needs to be added, it is not mentioned in readme -->
     </div>
-
   </div>
-
   <div class="response_count">
-
     <p><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> number of people responded to this quote.</p>
-
   </div>
-
-
-
 </div>
-<!-- provides the first frame, quote info, number of people who have responded -->
 
-
-
-
-
+<!-- SECOND FRAME -->
 <div class="frame">
-
   <div class="graph">
     <!-- graph will be added -->
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
     <% all_quote_responses= @responses.where("quote_id = #{@response_quote.id}")%>
     <% groups = all_quote_responses.group(:emotion_id).count %>
     <%=pie_chart( { "\u{1F600}" => groups[1], "\u{1F61F}" => groups[2], "\u{1F621}" => groups[3], "\u{1F616}"=> groups[4], "\u{1F631}"=> groups[5], "\u{1F633}"=> groups[6]} ) %>
-    <p>testing test</p>
   </div>
-
-  <div class="breakdown">
-    visuals of percentage break down, color coded
-  </div>
-
-
 </div>
-# shows the graph and visual data
 
-
-
-
-<div id="frame2">
-  <div class="graph">
-    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-    <%= pie_chart @responses.group([:quote_id]).count %>
-  </div>
-
+<!-- THIRD FRAME -->
+<div class="frame">
   <div class="breakdown">
-    <%= link_to"More Information About this Topic", @redirect_wiki_link %>
     <h3><%= @current_topic %> </h3>
     <%= simple_format @blurb %>
     <p> <%= link_to "Source: Wikipedia", @redirect_wiki_link %> </p>
   </div>
 </div>
-
-<!--
-  <div class="frame">
-
-  <div class="background">
-    <p>wiki blurb api</p>
-  </div>
-
-
-  <div class="continue_reading">
-    <%#= link_to("Continue Reading"), @quote.wiki_url %>
-
-  </div>
-</div>
--->
-<!-- provides background info about the topic and sources to new info -->
