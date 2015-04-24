@@ -13,7 +13,10 @@ class ResponsesController < ApplicationController
     @response_emotion = @response.emotion
     @current_topic = @response_quote.topic
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fc9e90d4bd09a1656b70b4ae11845760b080885e
     @wiki_link = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=#{@current_topic}&prop=revisions&rvprop=content")
     page_key = @wiki_link["query"]["pages"].keys[0]
     redirection_value = @wiki_link["query"]["pages"][page_key]["revisions"][0]["*"]
@@ -41,10 +44,10 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    @emotional_response = Response.new(response_params)
+    @response = Response.new(response_params)
 
-    if @emotional_response.save
-      redirect_to @emotional_response
+    if @response.save
+      redirect_to @response
     else
       render :new
     end
