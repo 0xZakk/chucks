@@ -14,24 +14,22 @@ class ResponsesController < ApplicationController
     @current_topic = @response_quote.topic
 
 
-
     @wiki_link = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=#{@current_topic}&prop=revisions&rvprop=content")
     page_key = @wiki_link["query"]["pages"].keys[0]
     redirection_value = @wiki_link["query"]["pages"][page_key]["revisions"][0]["*"]
 
     if redirection_value.scan("#REDIRECT") == ["#REDIRECT"]
       redirect_topic = redirection_value.scan(/(?<=\[)[^\[.]+?(?=\])/).first
-      @redirect_wiki_link = "https://en.wikipedia.org/wiki/#{redirect_topic}"
-      blurb_extract = HTTParty.get("https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=#{redirect_topic}")
+      @redirect_wiki_link = "http://en.wikipedia.org/wiki/#{redirect_topic}"
+      blurb_extract = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=#{redirect_topic}")
     else
-      @redirect_wiki_link = "https://en.wikipedia.org/wiki/#{@current_topic}"
-      blurb_extract = HTTParty.get("https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=#{@current_topic}")
+      @redirect_wiki_link = "http://en.wikipedia.org/wiki/#{@current_topic}"
+      blurb_extract = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=#{@current_topic}")
     end
-
+# changed all https to http
     blurb_key = blurb_extract["query"]["pages"].keys[0]
 
     @blurb = blurb_extract["query"]["pages"][blurb_key]["extract"]
-
 
   end
 
