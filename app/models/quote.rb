@@ -11,7 +11,7 @@ class Quote < ActiveRecord::Base
     if c == "Filter by Category"
       return Quote.all.sample
     else
-      return Quote.where category: c
+      return Quote.where(category: c).sample
     end
   end
 

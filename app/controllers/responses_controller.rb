@@ -34,8 +34,8 @@ class ResponsesController < ApplicationController
 
   def new
     @response = Response.new
-    find_quote = Quote.retrieve_quote(params[:category_filter])
-    @response_quote = find_quote.sample
+    @response_quote = Quote.retrieve_quote(params[:category_filter])
+    # binding.pry
     @emotions = Emotion.all
   end
 
