@@ -4,6 +4,7 @@ class ResponsesController < ApplicationController
   def index
     @quote = Quote.all
     @response = Response.new
+
   end
 
   def show
@@ -11,11 +12,12 @@ class ResponsesController < ApplicationController
     @response_quote = @response.quote
     @responses = Response.all
     @response_emotion = @response.emotion
+    binding.pry
   end
 
   def new
     @response = Response.new
-    
+
     @response_quote = Quote.retrieve_quote(params[:topic_filter])
     @emotions = Emotion.all
   end
