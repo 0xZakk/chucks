@@ -1,5 +1,5 @@
 <!-- FIRST FRAME -->
-<div class="frame" id="frame-one">
+<div class="frame" id="first_frame">
   <div class="postcard">
 
     <div class="left-side">
@@ -19,7 +19,8 @@
   </div>
 
   <div class="response_count">
-    <h3><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> people have responded to this quote.</h3>
+
+    <h3><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> number of people responded to this quote.</h3>
   </div>
 </div>
 
@@ -35,11 +36,13 @@
   </div>
 </div>
 
+
+
 <!-- THIRD FRAME -->
 <div class="frame" id="third_frame">
   <div class="breakdown">
     <h3><%= @current_topic %> </h3>
-    <%= simple_format @blurb %>
+    <%= word_wrap @blurb %>
     <p> <%= link_to "Source: Wikipedia", @redirect_wiki_link %> </p>
   </div>
 </div>

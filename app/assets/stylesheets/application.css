@@ -27,8 +27,8 @@ body {
 header {
   margin: 30px;
   height: 100px;
-  text-align: center; 
-  border-bottom: 1px solid black; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 /****************/
@@ -178,16 +178,22 @@ main {
   height: 90vh;
 }
 
-#frame-one {
+#first_frame {
   text-align: center;
 }
 
-#frame-one p {
+#first_frame p {
   margin: 10px;
 }
 
 .author-data li {
   list-style-type: none;
+}
+
+#third_frame {
+  margin: 0 20% 0 20%;
+  line-height: 120%;
+  align: center;
 }
 
 /******************/
@@ -198,3 +204,4 @@ footer {
   text-align: center;
   margin: 30px;
 }
+
