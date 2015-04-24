@@ -49,9 +49,12 @@ header {
 }
 
 #user_selection {
-  width: 100px;
   height: 50px;
   float: left;
+}
+#user_selection p{
+  height: 50px;
+
 }
 
 #next_page {

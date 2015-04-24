@@ -16,7 +16,7 @@
     <div id="only_on_show">
       <div id="user_selection">
         <% if @response.id %>
-          <p><%= @response.emotion.title %></p>
+          <p><%=image_tag @response.emotion.url %></p>
         <% else %>
           <!-- display nothing -->
         <% end %>
