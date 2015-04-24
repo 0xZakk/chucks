@@ -27,8 +27,8 @@ body {
 header {
   margin: 30px;
   height: 100px;
-  text-align: center; 
-  border-bottom: 1px solid black; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 /****************/
@@ -150,7 +150,7 @@ main {
 
 .right-side {
   float: right;
-  border: 1px solid black;  
+  border: 1px solid black;
   width: 49.5%;
   height: 100%;
 }
@@ -180,4 +180,12 @@ main {
 footer {
   text-align: center;
   margin: 30px;
+}
+
+#third_frame {
+  margin: 0 20% 0 20%;
+  line-height: 120%;
+  align: center;
+
+
 }

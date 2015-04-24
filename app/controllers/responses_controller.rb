@@ -14,10 +14,7 @@ class ResponsesController < ApplicationController
     @response_emotion = @response.emotion
     @current_topic = @response.quote.topic
 
-<<<<<<< HEAD
 
-=======
->>>>>>> fc9e90d4bd09a1656b70b4ae11845760b080885e
     @wiki_link = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=#{@current_topic}&prop=revisions&rvprop=content")
     page_key = @wiki_link["query"]["pages"].keys[0]
     redirection_value = @wiki_link["query"]["pages"][page_key]["revisions"][0]["*"]
@@ -34,10 +31,7 @@ class ResponsesController < ApplicationController
     blurb_key = blurb_extract["query"]["pages"].keys[0]
 
     @blurb = blurb_extract["query"]["pages"][blurb_key]["extract"]
-<<<<<<< HEAD
 
-=======
->>>>>>> d0f4bb3c9be60066ee5907269127551ac8f86cde
   end
 
   def new

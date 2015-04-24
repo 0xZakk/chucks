@@ -21,12 +21,10 @@
   </div>
 
   <div class="response_count">
-<<<<<<< HEAD
+
     <p><%="#{@response_count}"%> number of people responded to this quote.</p>
 
-=======
-    <h3><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> number of people responded to this quote.</h3>
->>>>>>> d0f4bb3c9be60066ee5907269127551ac8f86cde
+
   </div>
 </div>
 
@@ -40,7 +38,7 @@
     <%=pie_chart( { "\u{1F600}" => groups[1], "\u{1F61F}" => groups[2], "\u{1F621}" => groups[3], "\u{1F616}"=> groups[4], "\u{1F631}"=> groups[5], "\u{1F633}"=> groups[6]} ) %>
   </div>
 </div>
-<<<<<<< HEAD
+
 # shows the graph and visual data
 
 
@@ -48,18 +46,17 @@
 
 
 
-=======
->>>>>>> d0f4bb3c9be60066ee5907269127551ac8f86cde
+
 
 <!-- THIRD FRAME -->
 <div class="frame" id="third_frame">
   <div class="breakdown">
     <h3><%= @current_topic %> </h3>
-    <%= simple_format @blurb %>
+    <%= word_wrap @blurb %>
     <p> <%= link_to "Source: Wikipedia", @redirect_wiki_link %> </p>
   </div>
 </div>
-<<<<<<< HEAD
+
 
 
 
@@ -78,5 +75,3 @@
 </div>
 -->
 <!-- provides background info about the topic and sources to new info -->
-=======
->>>>>>> d0f4bb3c9be60066ee5907269127551ac8f86cde
