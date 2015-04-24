@@ -137,33 +137,39 @@ main {
 .postcard {
   width: 600px;
   height: 350px;
-  border: 1px solid black;
+  opacity: .9;
   margin: 0 auto;
+  display: table;
+  background: url(postbackground.jpg);
 }
 
 .left-side {
-  float: left;
+  vertical-align: middle;
+  display: table-cell;
   border: 1px solid black;
   width: 49.5%;
-  height: 100%;
+  margin: 5% 0 5% 0;
   text-align: center;
+
 }
 
 .left-side p {
+  width: 80%;
   display: inline-block;
   vertical-align: middle;
 }
 
 .right-side {
-  float: right;
+  vertical-align: middle;
+  display: table-cell;
   border: 1px solid black;
   width: 49.5%;
-  height: 100%;
   text-align: left;
+  margin: 5% 0 5% 0;
 }
 
 .right-side li {
-  padding: 5px;
+  padding: 5px 10px 5px 5px;
   text-align: left;
 }
 
@@ -173,16 +179,22 @@ main {
   height: 90vh;
 }
 
-#frame-one {
+#first_frame {
   text-align: center;
 }
 
-#frame-one p {
+#first_frame p {
   margin: 10px;
 }
 
 .author-data li {
   list-style-type: none;
+}
+
+#third_frame {
+  margin: 0 20% 0 20%;
+  line-height: 120%;
+  align: center;
 }
 
 /******************/

@@ -6,12 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Quote.create(category: "politics", topic: "Gay Rights", body: "gays are great", author: "Hillary Clinton", location: "Washington D.C.", date: "04/04/2014")
-Quote.create(category: "politics", topic: "Transgender Rights", body: "trans people are great", author: "Bill Clinton", location: "Washington D.C.", date: "04/04/2014")
-Quote.create(category: "politics", topic: "Abortion", body: "Abortion is bad", author: "Mit Romney", location: "Saltlake City, Utah", date: "08/01/2014")
-Quote.create(category: "politics", topic: "Immigration", body: "Stupid Immigrants", author: "Rick Perry", location: "Dallas, Texas", date: "08/03/2012")
-Quote.create(category: "politics", topic: "Foreign Policy", body: "Iran Iran Iran", author: "Ted Cruz", location: "Washington D.C.", date: "03/05/2011")
-Quote.create(category: "politics", topic: "Gay Rights", body: "gays are the best", author: "Barack Obama", location: "Washington D.C.", date: "09/09/2013")
+
+# Quote.create(category: "politics", topic: "Gay Rights", body: "gays are great", author: "Hillary Clinton", location: "Washington D.C.", date: "04/04/2014")
+# Quote.create(category: "politics", topic: "Transgender Rights", body: "trans people are great", author: "Bill Clinton", location: "Washington D.C.", date: "04/04/2014")
+# Quote.create(category: "politics", topic: "Abortion", body: "Abortion is bad", author: "Mit Romney", location: "Saltlake City, Utah", date: "08/01/2014")
+# Quote.create(category: "politics", topic: "Immigration", body: "Stupid Immigrants", author: "Rick Perry", location: "Dallas, Texas", date: "08/03/2012")
+# Quote.create(category: "politics", topic: "Foreign Policy", body: "Iran Iran Iran", author: "Ted Cruz", location: "Washington D.C.", date: "03/05/2011")
+# Quote.create(category: "politics", topic: "Gay Rights", body: "gays are the best", author: "Barack Obama", location: "Washington D.C.", date: "09/09/2013")
 
 
 Emotion.create(title: "Happiness", url: "https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_3-128.png")
