@@ -146,6 +146,12 @@ main {
   border: 1px solid black;
   width: 49.5%;
   height: 100%;
+  text-align: center;
+}
+
+.left-side p {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .right-side {
@@ -153,24 +159,30 @@ main {
   border: 1px solid black;
   width: 49.5%;
   height: 100%;
+  text-align: left;
+}
+
+.right-side li {
+  padding: 5px;
+  text-align: left;
 }
 
 /** SHOW **/
 
 .frame {
-  height: 100vh;
+  height: 90vh;
 }
 
 #frame-one {
   text-align: center;
 }
 
-.author_data li {
-  list-style-type: none;
+#frame-one p {
+  margin: 10px;
 }
 
-.response_count {
-
+.author-data li {
+  list-style-type: none;
 }
 
 /******************/
