@@ -4,6 +4,7 @@ class ResponsesController < ApplicationController
   def index
     @quote = Quote.all
     @response = Response.new
+
   end
 
   def show
@@ -12,7 +13,6 @@ class ResponsesController < ApplicationController
     @responses = Response.all
     @response_emotion = @response.emotion
     @current_topic = @response.quote.topic
-    # binding.pry
 
     @wiki_link = HTTParty.get("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=#{@current_topic}&prop=revisions&rvprop=content")
     page_key = @wiki_link["query"]["pages"].keys[0]
@@ -30,14 +30,12 @@ class ResponsesController < ApplicationController
     blurb_key = blurb_extract["query"]["pages"].keys[0]
 
     @blurb = blurb_extract["query"]["pages"][blurb_key]["extract"]
-
-
   end
 
   def new
     @response = Response.new
-
-    @response_quote = Quote.retrieve_quote(params[:topic_filter])
+    find_quote = Quote.retrieve_quote(params[:category_filter])
+    @response_quote = find_quote.sample
     @emotions = Emotion.all
   end
 
