@@ -32,7 +32,7 @@
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
     <% all_quote_responses= @responses.where("quote_id = #{@response_quote.id}")%>
     <% groups = all_quote_responses.group(:emotion_id).count %>
-    <%=pie_chart( { "\u{1F600}" => groups[1], "\u{1F61F}" => groups[2], "\u{1F621}" => groups[3], "\u{1F616}"=> groups[4], "\u{1F631}"=> groups[5], "\u{1F633}"=> groups[6]} ) %>
+    <%=pie_chart( { "\u{1F600}" => groups[1], "\u{1F61F}" => groups[2], "\u{1F621}" => groups[3], "\u{1F616}"=> groups[4], "\u{1F631}"=> groups[5], "\u{1F633}"=> groups[6]}, height: "500px", library: {backgroundColor: "#FAECD8"}) %>
   </div>
 </div>
 
