@@ -80,7 +80,7 @@ main {
 }
 
 #category_dropdown {
-
+  text-align: center;
 }
 
 #category_filter {
@@ -105,7 +105,7 @@ main {
   height: 64px;
   padding: 10px;
   border: 0 none;
-  background-color: #faf5d8;
+  background-color: #FAECD8;
 }
 
 /**   Emotions   **/
@@ -172,6 +172,10 @@ main {
   text-align: left;
 }
 
+.author-data li {
+  list-style-type: none;
+}
+
 /** SHOW **/
 
 .frame {
@@ -179,15 +183,17 @@ main {
 }
 
 #first_frame {
+  margin: 0 20% 0 20%;  
+}
+
+
+
+.response_count h3 {
+  margin: 10px;
   text-align: center;
 }
-
-#first_frame p {
-  margin: 10px;
-}
-
-.author-data li {
-  list-style-type: none;
+#second_frame h3 {
+  margin: 0 20% 0 20%;  
 }
 
 #third_frame {
