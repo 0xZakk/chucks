@@ -137,9 +137,10 @@ main {
 .postcard {
   width: 600px;
   height: 350px;
-  border: 1px solid black;
+  opacity: .9;
   margin: 0 auto;
   display: table;
+  background: url(postbackground.jpg);
 }
 
 .left-side {
@@ -161,7 +162,7 @@ main {
 .right-side {
   vertical-align: middle;
   display: table-cell;
-  border: 1px solid black;  
+  border: 1px solid black;
   width: 49.5%;
   text-align: left;
   margin: 5% 0 5% 0;
@@ -204,4 +205,3 @@ footer {
   text-align: center;
   margin: 30px;
 }
-
