@@ -4,6 +4,7 @@ class ResponsesController < ApplicationController
   def index
     @quote = Quote.all
     @response = Response.new
+
   end
 
   def show
@@ -11,7 +12,7 @@ class ResponsesController < ApplicationController
     @response_quote = @response.quote
     @responses = Response.all
     @response_emotion = @response.emotion
-    @current_topic = @response_quote.topic
+    @current_topic = @response.quote.topic
 
 <<<<<<< HEAD
 
@@ -33,13 +34,16 @@ class ResponsesController < ApplicationController
     blurb_key = blurb_extract["query"]["pages"].keys[0]
 
     @blurb = blurb_extract["query"]["pages"][blurb_key]["extract"]
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0f4bb3c9be60066ee5907269127551ac8f86cde
   end
 
   def new
     @response = Response.new
-
-    @response_quote = Quote.retrieve_quote(params[:topic_filter])
+    @response_quote = Quote.retrieve_quote(params[:category_filter])
+    # binding.pry
     @emotions = Emotion.all
   end
 

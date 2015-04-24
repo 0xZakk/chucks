@@ -1,4 +1,7 @@
-<%= form_tag new_response_path, method: 'get' do %>
-  <%= select_tag 'topic_filter', options_for_select(Quote.quote_topics.uniq)%>
-   <%= submit_tag "Send", id: "play_button"%>
-<% end%>
+
+<div id="category_dropdown">
+  <%= form_tag new_response_path, method: 'get' do %>
+    <%= select_tag 'category_filter', options_for_select(Quote.quote_category.uniq)%>
+     <%= submit_tag "Send", id: "play_button"%>
+  <% end%>
+</div>

@@ -1,56 +1,46 @@
-
-
-<div class="frame">
-  <h1>Quote</h1>
-
+<!-- FIRST FRAME -->
+<div class="frame" id="frame-one">
   <div class="postcard">
 
-    <div class="quote">
-      <p>"<%= @response_quote.body %>"</p>
+    <div class="left-side">
+      <div class="quote">
+        <p>"<%= @response_quote.body %>"</p>
+      </div>
     </div>
 
-    <div class="author_data">
-      <ul>
-        <li><%= @response_quote.author %></li>
-        <li><%= @response_quote.date %></li>
-        <li><%= @response_quote.location %></li>
-      </ul>
-      <!-- the where attribute needs to be added, it is not mentioned in readme -->
+    <div class="right-side">
+      <div class="author_data">
+        <ul>
+          <li><%= @response_quote.author %></li>
+          <li><%= @response_quote.date %></li>
+          <li><%= @response_quote.location %></li>
+        </ul>
+      </div>
     </div>
 
   </div>
 
   <div class="response_count">
+<<<<<<< HEAD
     <p><%="#{@response_count}"%> number of people responded to this quote.</p>
 
+=======
+    <h3><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> number of people responded to this quote.</h3>
+>>>>>>> d0f4bb3c9be60066ee5907269127551ac8f86cde
   </div>
-
-
-
 </div>
-<!-- provides the first frame, quote info, number of people who have responded -->
 
-
-
-
-
-<div class="frame">
-
+<!-- SECOND FRAME -->
+<div class="frame" id="second_frame">
   <div class="graph">
     <!-- graph will be added -->
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
     <% all_quote_responses= @responses.where("quote_id = #{@response_quote.id}")%>
     <% groups = all_quote_responses.group(:emotion_id).count %>
     <%=pie_chart( { "\u{1F600}" => groups[1], "\u{1F61F}" => groups[2], "\u{1F621}" => groups[3], "\u{1F616}"=> groups[4], "\u{1F631}"=> groups[5], "\u{1F633}"=> groups[6]} ) %>
-    <p>testing test</p>
   </div>
-
-  <div class="breakdown">
-    visuals of percentage break down, color coded
-  </div>
-
-
 </div>
+<<<<<<< HEAD
 # shows the graph and visual data
 
 
@@ -58,14 +48,18 @@
 
 
 
+=======
+>>>>>>> d0f4bb3c9be60066ee5907269127551ac8f86cde
 
+<!-- THIRD FRAME -->
+<div class="frame" id="third_frame">
   <div class="breakdown">
-    <%= link_to"More Information About this Topic", @redirect_wiki_link %>
     <h3><%= @current_topic %> </h3>
     <%= simple_format @blurb %>
     <p> <%= link_to "Source: Wikipedia", @redirect_wiki_link %> </p>
   </div>
 </div>
+<<<<<<< HEAD
 
 
 
@@ -84,3 +78,5 @@
 </div>
 -->
 <!-- provides background info about the topic and sources to new info -->
+=======
+>>>>>>> d0f4bb3c9be60066ee5907269127551ac8f86cde
