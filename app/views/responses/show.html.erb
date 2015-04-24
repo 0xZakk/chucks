@@ -19,7 +19,8 @@
   </div>
 
   <div class="response_count">
-    <h3><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> people have responded to this quote.</h3>
+
+    <p><%="#{@response_count}"%> number of people responded to this quote.</p>
   </div>
 </div>
 
@@ -34,11 +35,39 @@
   </div>
 </div>
 
+# shows the graph and visual data
+
+
+
+
+
+
+
+
 <!-- THIRD FRAME -->
 <div class="frame" id="third_frame">
   <div class="breakdown">
     <h3><%= @current_topic %> </h3>
-    <%= simple_format @blurb %>
+    <%= word_wrap @blurb %>
     <p> <%= link_to "Source: Wikipedia", @redirect_wiki_link %> </p>
   </div>
 </div>
+
+
+
+
+<!--
+<div class="frame">
+
+<div class="background">
+<p>wiki blurb api</p>
+</div>
+
+
+<div class="continue_reading">
+<%#= link_to("Continue Reading"), @quote.wiki_url %>
+
+</div>
+</div>
+-->
+<!-- provides background info about the topic and sources to new info -->
