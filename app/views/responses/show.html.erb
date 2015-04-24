@@ -22,7 +22,7 @@
 
   <div class="response_count">
 
-    <p><%="#{@response_count}"%> number of people responded to this quote.</p>
+    <p><%="#{@responses.where("quote_id = #{@response.quote.id}").count}"%> number of people responded to this quote.</p>
 
   </div>
 
